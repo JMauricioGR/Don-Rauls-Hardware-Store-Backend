@@ -19,6 +19,6 @@ public class WebfluxConfig {
                         .allowedOrigins("*")
                         .allowedMethods("*");
             }
-        }
+        };
     }
 }
