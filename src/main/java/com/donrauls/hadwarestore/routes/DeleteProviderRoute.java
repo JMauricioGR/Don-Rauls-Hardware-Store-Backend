@@ -19,7 +19,7 @@ public class DeleteProviderRoute {
     @Bean
     RouterFunction<ServerResponse> deleteProvider(DeleteProviderUseCase deleteProviderUseCase){
         return route(DELETE("provider/delete/{id}").and(accept(MediaType.APPLICATION_JSON)),
-                request -> ServerResponse.status(HttpStatus.GONE)
+                request -> ServerResponse.status(HttpStatus.OK)
                         .body(BodyInserters.fromPublisher(deleteProviderUseCase.apply(request.pathVariable("id")), Void.class)));
     }
 }

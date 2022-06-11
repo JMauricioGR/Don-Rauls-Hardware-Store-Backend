@@ -12,6 +12,6 @@ public class Providers {
     @Id
     private String id;
     private String name;
-    private Number providerId;
+    private String providerId;
     private String note;
 }
