@@ -12,7 +12,6 @@ import reactor.core.publisher.Mono;
 public class DeleteProviderUseCase implements DeleteProvider {
 
     private final ProvidersInterface providersInterface;
-    private final ProviderMapper providerMapper;
 
     @Override
     public Mono<Void> apply(String id){
