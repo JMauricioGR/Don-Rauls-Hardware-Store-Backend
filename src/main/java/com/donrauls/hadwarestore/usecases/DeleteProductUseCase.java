@@ -1,9 +1,7 @@
-package com.donrauls.hadwarestore.usecases.interfaces;
+package com.donrauls.hadwarestore.usecases;
 
-import com.donrauls.hadwarestore.mappers.ProductsMapper;
-import com.donrauls.hadwarestore.mappers.ProviderMapper;
 import com.donrauls.hadwarestore.repositories.ProductsInterface;
-import com.donrauls.hadwarestore.repositories.ProvidersInterface;
+import com.donrauls.hadwarestore.usecases.interfaces.DeleteProduct;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
