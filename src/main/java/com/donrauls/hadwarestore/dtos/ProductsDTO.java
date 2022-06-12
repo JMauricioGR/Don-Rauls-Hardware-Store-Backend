@@ -15,4 +15,5 @@ public class ProductsDTO {
     private Integer maximumUnits;
     private String provider;
     private Integer stock;
+    private Integer price;
 }

@@ -9,7 +9,7 @@ import reactor.core.publisher.Flux;
 
 @Service
 @AllArgsConstructor
-public class GetAllBills {
+public class GetAllBillsUseCase {
 
     private BillsMapper billsMapper;
     private BillsInterface billsInterface;

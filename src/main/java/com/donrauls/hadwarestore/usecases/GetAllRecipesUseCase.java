@@ -9,7 +9,7 @@ import reactor.core.publisher.Flux;
 
 @Service
 @AllArgsConstructor
-public class GetAllRecipes {
+public class GetAllRecipesUseCase {
 
     private RecipesMapper recipesMapper;
     private RecipesInterface recipesInterface;

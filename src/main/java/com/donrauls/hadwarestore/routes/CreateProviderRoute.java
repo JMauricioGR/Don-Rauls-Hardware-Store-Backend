@@ -2,6 +2,11 @@ package com.donrauls.hadwarestore.routes;
 
 import com.donrauls.hadwarestore.dtos.ProvidersDTO;
 import com.donrauls.hadwarestore.usecases.CreateProviderUseCase;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import org.springdoc.core.annotations.RouterOperation;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
@@ -18,6 +23,8 @@ import java.util.function.Function;
 public class CreateProviderRoute {
 
     @Bean
+    @RouterOperation(operation = @Operation(description = "Create provider ", operationId = "createProvider", tags = "Provider",
+            responses = @ApiResponse(responseCode = "200", content = @Content(schema = @Schema(implementation = ProvidersDTO.class)))))
     public RouterFunction<ServerResponse> createProvider(CreateProviderUseCase createProviderUseCase){
         Function<ProvidersDTO, Mono<ServerResponse>> executeCreate = providerDTO
 -> createProviderUseCase.apply(providerDTO)
