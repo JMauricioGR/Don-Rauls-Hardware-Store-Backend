@@ -1,8 +1,8 @@
 package com.donrauls.hadwarestore.routes;
 
 
-import com.donrauls.hadwarestore.dtos.RecipesDTO;
-import com.donrauls.hadwarestore.usecases.GetAllRecipesUseCase;
+import com.donrauls.hadwarestore.dtos.ReceiptDTO;
+import com.donrauls.hadwarestore.usecases.GetAllReceiptUseCase;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -21,12 +21,12 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 
 
 @Configuration
-public class GetAllRecipesRoute {
+public class GetAllReceiptsRoute {
 
     @Bean
-    @RouterOperation(operation = @Operation(description = "Get all recipes from the database", operationId = "getRecipes", tags = "Recipe",
-            responses = @ApiResponse(responseCode = "200", content = @Content(schema = @Schema(implementation = RecipesDTO.class)))))
-    public RouterFunction<ServerResponse> allRecipes(GetAllRecipesUseCase getAllRecipesUseCase){
-        return route(GET("recipes/all"), request -> ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).body(BodyInserters.fromPublisher(getAllRecipesUseCase.getAllRecipes(), RecipesDTO.class)));
+    @RouterOperation(operation = @Operation(description = "Get all recipes from the database", operationId = "getRecipes", tags = "Receipt",
+            responses = @ApiResponse(responseCode = "200", content = @Content(schema = @Schema(implementation = ReceiptDTO.class)))))
+    public RouterFunction<ServerResponse> allRecipes(GetAllReceiptUseCase getAllRecipesUseCase){
+        return route(GET("recipes/all"), request -> ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).body(BodyInserters.fromPublisher(getAllRecipesUseCase.getAllReceipts(), ReceiptDTO.class)));
     }
 }

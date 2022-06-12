@@ -1,7 +1,7 @@
 package com.donrauls.hadwarestore.usecases;
 
 import com.donrauls.hadwarestore.dtos.ProductsDTO;
-import com.donrauls.hadwarestore.mappers.ProductsMapper;
+import com.donrauls.hadwarestore.dtos.mappers.ProductsMapper;
 import com.donrauls.hadwarestore.repositories.ProductsInterface;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,10 +1,9 @@
 package com.donrauls.hadwarestore.usecases;
 
 import com.donrauls.hadwarestore.dtos.ProductsDTO;
-import com.donrauls.hadwarestore.mappers.ProductsMapper;
+import com.donrauls.hadwarestore.dtos.mappers.ProductsMapper;
 import com.donrauls.hadwarestore.repositories.ProductsInterface;
 import com.donrauls.hadwarestore.usecases.interfaces.CreateProduct;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;

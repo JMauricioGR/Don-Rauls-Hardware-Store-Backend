@@ -1,4 +1,4 @@
-package com.donrauls.hadwarestore.mappers;
+package com.donrauls.hadwarestore.dtos.mappers;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
