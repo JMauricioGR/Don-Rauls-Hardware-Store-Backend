@@ -1,4 +1,4 @@
-package com.donrauls.hadwarestore.dtos.mappers;
+package com.donrauls.hadwarestore.mappers;
 
 import com.donrauls.hadwarestore.collections.Receipt;
 import com.donrauls.hadwarestore.dtos.ReceiptDTO;

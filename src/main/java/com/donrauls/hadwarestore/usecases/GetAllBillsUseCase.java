@@ -1,7 +1,7 @@
 package com.donrauls.hadwarestore.usecases;
 
 import com.donrauls.hadwarestore.dtos.BillsDTO;
-import com.donrauls.hadwarestore.dtos.mappers.BillsMapper;
+import com.donrauls.hadwarestore.mappers.BillsMapper;
 import com.donrauls.hadwarestore.repositories.BillsInterface;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

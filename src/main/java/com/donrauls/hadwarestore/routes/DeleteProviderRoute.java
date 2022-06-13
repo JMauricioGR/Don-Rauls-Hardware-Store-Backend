@@ -3,6 +3,8 @@ package com.donrauls.hadwarestore.routes;
 
 import com.donrauls.hadwarestore.usecases.DeleteProviderUseCase;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -22,7 +24,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 public class DeleteProviderRoute {
 
     @Bean
-    @RouterOperation(operation = @Operation(description = "Delete provider by id", operationId = "deleteProvider", tags = "Provider",
+    @RouterOperation(operation = @Operation(description = "Delete provider by id", operationId = "deleteProvider", tags = "Provider", parameters = { @Parameter(in = ParameterIn.PATH, name = "id", description = "Provider Id") },
             responses = @ApiResponse(responseCode = "200", content = @Content(schema = @Schema(implementation = Void.class)))))
     RouterFunction<ServerResponse> deleteProvider(DeleteProviderUseCase deleteProviderUseCase){
         return route(DELETE("provider/delete/{id}").and(accept(MediaType.APPLICATION_JSON)),

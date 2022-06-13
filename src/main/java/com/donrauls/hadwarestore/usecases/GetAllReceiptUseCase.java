@@ -1,7 +1,7 @@
 package com.donrauls.hadwarestore.usecases;
 
 import com.donrauls.hadwarestore.dtos.ReceiptDTO;
-import com.donrauls.hadwarestore.dtos.mappers.ReceiptMapper;
+import com.donrauls.hadwarestore.mappers.ReceiptMapper;
 import com.donrauls.hadwarestore.repositories.ReceiptInterface;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

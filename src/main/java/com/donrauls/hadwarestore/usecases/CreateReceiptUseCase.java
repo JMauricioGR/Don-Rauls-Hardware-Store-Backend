@@ -1,7 +1,7 @@
 package com.donrauls.hadwarestore.usecases;
 
 import com.donrauls.hadwarestore.dtos.ReceiptDTO;
-import com.donrauls.hadwarestore.dtos.mappers.ReceiptMapper;
+import com.donrauls.hadwarestore.mappers.ReceiptMapper;
 import com.donrauls.hadwarestore.repositories.ReceiptInterface;
 import com.donrauls.hadwarestore.usecases.interfaces.CreateReceipt;
 import org.springframework.beans.factory.annotation.Autowired;

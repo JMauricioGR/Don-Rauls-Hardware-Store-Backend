@@ -7,7 +7,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @Document(collection = "receipt")
-@AllArgsConstructor
 public class Receipt {
     @Id
     private String id;
